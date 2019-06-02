@@ -32,5 +32,11 @@ function addNewLiOnClick(){
 }
 
 function clearEmployeeListOnLinkClick(){
-  
+   clearButton = document.querySelector('body main a')
+  employeeList = document.querySelector('main ul')
+  clearButton.addEventListener('click', function(event) {
+    while(employeeList.firstChild){
+      employeeList.removeChild(employeeList.firstChild);
+    }
+  })
 }
